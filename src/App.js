@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/Header.jsx'; // Updated to .jsx
+import Gallery from './components/Gallery.jsx'; // Updated to .jsx
+import About from './components/About.jsx'; // Updated to .jsx
+import Contact from './components/Contact.jsx'; // Updated to .jsx
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+	return (
+		<Router>
+			<div>
+				{/* Header will be visible on all pages */}
+				<Header />
+
+				{/* Define routes for different pages */}
+				<Routes>
+					{/* Work page (Home) */}
+					<Route path='/' element={<Gallery />} />
+
+					{/* About page */}
+					<Route path='/about' element={<About />} />
+
+					{/* Contact page */}
+					<Route path='/contact' element={<Contact />} />
+				</Routes>
+			</div>
+		</Router>
+	);
+};
 
 export default App;
