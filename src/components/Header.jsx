@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 const Header = () => {
 	return (
 		<header className='fixed top-0 left-0 z-50 w-full bg-white'>
-			<div className='max-w-screen-lg mx-auto flex justify-between items-center py-4 px-6 mb-2'>
+			<div className='max-w-screen-lg mx-auto flex justify-between items-center py-2 px-6 mb-2'>
 				{/* Left: Title */}
 				<div className='text-left'>
 					<h1 className='text-4xl font-fascinate text-gray-800'>*emmeline</h1>

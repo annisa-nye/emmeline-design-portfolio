@@ -11,21 +11,23 @@
 
 .my-masonry-grid {
   display: flex;
-  margin-left: -15px; /* Adjust the gutter size */
   width: auto;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .my-masonry-grid_column {
   padding-left: 15px; /* Adjust the gutter size */
   background-clip: padding-box;
+
 }
 
 .my-masonry-grid_column > div {
   margin-bottom: 15px; /* Adjust the spacing between items */
+
 }
 
 img {
   width: 100%;
-  height: auto;
-  border-radius: 10px; /* Optional for rounded images */
+  border-radius: 0 !important;
 }
